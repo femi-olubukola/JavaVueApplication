@@ -13,11 +13,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>JavaVueApplication</name>
     <description>JavaVueApplication</description>
+
     <properties>
         <java.version>17</java.version>
         <node.version>v16.13.2</node.version>
         <npm.version>8.1.2</npm.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -30,20 +32,24 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
+<!--            frontend-maven-plugin-->
             <plugin>
                 <groupId>com.github.eirslett</groupId>
                 <artifactId>frontend-maven-plugin</artifactId>
@@ -88,9 +94,9 @@
                     <nodeVersion>${node.version}</nodeVersion>
                     <workingDirectory>src/frontend</workingDirectory>
                 </configuration>
-
             </plugin>
 
+<!--            maven-resources-plugin-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
@@ -113,6 +119,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
